@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>The Soi Chot experience:  Covid edition</h2>
+
+<table>
+  <tr>
+      <img src="https://image.winudf.com/v2/image/Y29tLlNtaWxleUxpdmVXYWxscGFwZXJfc2NyZWVuXzZfMTUzNzgyNjM3Nl8wMjc/screen-6.jpg?fakeurl=1&type=.jpg" alt="Mountain"
+      width="1000px"
+      height="200px">
+
+     <th>updated</th>
+     <th>country</th>
+     <th>flags</th>
+     <th>Latitute</th>
+     <th>Longitude</th>
+     <th>cases</th>
+     <th>todayCases</th>
+     <th>deaths</th>
+     <th>todayDeaths </th>
+     <th>recovered</th>
+     <th>todayRecovered</th>
+     <th>active</th>
+     <th>critical</th>
+     <th>casesPerOneMillion</th>
+     <th>deathsPerOneMillion</th>
+     <th>tests</th>
+     <th>testsPerOneMillion</th>
+     <th>population</th>
+     <th>continent</th>
+     <th>oneCasePerPeople</th>
+     <th>oneDeathPerPeople</th>
+     <th>oneTestPerPeople</th>
+     <th>activePerOneMillion</th>
+     <th>recoveredPerOneMillion</th>
+     <th>criticalPerOneMillion</th>
+  </tr>
+  {% for x in data %}
+  <tr>
+    <td>{{x["updated"]}}</td>
+    <td>{{x["country"]}}</td>
+    <td><img src={{x["countryInfo"]["flag"]}}" width="20px" height="10px"/></td>
+    <td>{{x["countryInfo"]["lat"]}}</td>
+    <td>{{x["countryInfo"]["long"]}}</td>
+    <td>{{x["cases"]}}</td>
+    <td>{{x["todayCases"]}}</td>
+    <td>{{x["deaths"]}}</td>
+    <td>{{x["todayDeaths"]}}</td>
+    <td>{{x["recovered"]}}</td>
+    <td>{{x["todayRecovered"]}}</td>
+    <td>{{x["active"]}}</td>
+    <td>{{x["critical"]}}</td>
+    <td>{{x["casesPerOneMillion"]}}</td>
+    <td>{{x["deathsPerOneMillion"]}}</td>
+    <td>{{x["tests"]}}</td>
+    <td>{{x["testsPerOneMillion"]}}</td>
+    <td>{{x["population"]}}</td>
+    <td>{{x["continent"]}}</td>
+    <td>{{x["oneCasePerPeople"]}}</td>
+    <td>{{x["oneDeathPerPeople"]}}</td>
+    <td>{{x["oneTestPerPeople"]}}</td>
+    <td>{{x["activePerOneMillion"]}}</td>
+    <td>{{x["recoveredPerOneMillion"]}}</td>
+    <td>{{x["criticalPerOneMillion"]}}</td>
+  </tr>
+  {% endfor%}
+</table>
+
+</body>
+</html>
